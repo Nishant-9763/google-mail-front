@@ -26,7 +26,7 @@ const selectedEmails = ref([])
 const getAllEmails = ref([])
 async function fetchAllEmails() {
   try {
-    const fetchEmails = await axios.get('http://localhost:5000/api/gmail/read-all-mails')
+    const fetchEmails = await axios.get('prolific-tenderness-env.up.railway.app/api/gmail/read-all-mails')
     getAllEmails.value = fetchEmails.data
     console.log(fetchEmails);
 
