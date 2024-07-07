@@ -1,4 +1,4 @@
-<script setup>
+  <script setup>
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 import ComposeDialog from '@/views/apps/email/ComposeDialog.vue'
 import EmailLeftSidebarContent from '@/views/apps/email/EmailLeftSidebarContent.vue'
@@ -26,7 +26,7 @@ const selectedEmails = ref([])
 const getAllEmails = ref([])
 async function fetchAllEmails() {
   try {
-    const fetchEmails = await axios.get('prolific-tenderness-env.up.railway.app/api/gmail/read-all-mails')
+    const fetchEmails = await axios.get('https://prolific-tenderness-env.up.railway.app/api/gmail/read-all-mails?page=1&pageSize=10')
     getAllEmails.value = fetchEmails.data
     console.log(fetchEmails);
 
